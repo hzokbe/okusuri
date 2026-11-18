@@ -1,16 +1,22 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { ReactNode } from 'react';
 
 interface ScreeProps {
   title: string;
 
   description?: string;
+
+  children?: ReactNode;
 }
 
-export default function Screen({ title, description }: ScreeProps) {
+export default function Screen({ title, description, children }: ScreeProps) {
   return (
-    <View style={styles.div}>
-      <Text style={styles.h1}>{title}</Text>
-      {description && <Text style={styles.h2}>{description}</Text>}
+    <View style={[styles.div, { flex: 1, gap: 2 }]}>
+      <View style={[styles.div, { gap: 2 }]}>
+        <Text style={styles.h1}>{title}</Text>
+        {description && <Text style={styles.h2}>{description}</Text>}
+      </View>
+      {children && <View style={[styles.div, { flex: 1 }]}>{children}</View>}
     </View>
   );
 }
@@ -18,9 +24,7 @@ export default function Screen({ title, description }: ScreeProps) {
 const styles = StyleSheet.create({
   div: {
     backgroundColor: '#111111',
-    flex: 1,
-    gap: 8,
-    padding: 24,
+    padding: 16,
   },
   h1: {
     color: '#eeeeee',
