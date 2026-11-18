@@ -18,11 +18,9 @@ export default function Screen({ title, description }: ScreeProps) {
 
 const styles = StyleSheet.create({
   div: {
-    alignItems: 'center',
     backgroundColor: '#111111',
     flex: 1,
     gap: 8,
-    justifyContent: 'center',
     padding: 24,
   },
   h1: {
@@ -34,6 +32,5 @@ const styles = StyleSheet.create({
     color: '#b4b4b4',
     fontSize: 16,
     fontWeight: 500,
-    textAlign: 'center',
   },
 });

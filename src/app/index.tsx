@@ -1,5 +1,5 @@
-import HomeScreen from '@/features/home/screens/HomeScreen';
+import TodayScreen from '@/features/today/screens/TodayScreen';
 
-export default function Home() {
-  return <HomeScreen />;
+export default function Today() {
+  return <TodayScreen />;
 }
