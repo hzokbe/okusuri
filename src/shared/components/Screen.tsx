@@ -1,5 +1,4 @@
-import { StyleSheet, Text } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { StyleSheet, Text, View } from 'react-native';
 
 interface ScreeProps {
   title: string;
@@ -9,10 +8,10 @@ interface ScreeProps {
 
 export default function Screen({ title, description }: ScreeProps) {
   return (
-    <SafeAreaView style={styles.div}>
+    <View style={styles.div}>
       <Text style={styles.h1}>{title}</Text>
       {description && <Text style={styles.h2}>{description}</Text>}
-    </SafeAreaView>
+    </View>
   );
 }
 
