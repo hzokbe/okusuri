@@ -64,12 +64,12 @@ export class Log {
     });
   }
 
-  isOverdue(now: Date): boolean {
-    return this.isPending && now.getTime() > this.scheduledAt.getTime();
-  }
-
   take(at: Date): Log {
     return this.resolve('taken', at);
+  }
+
+  skip(at: Date): Log {
+    return this.resolve('skipped', at);
   }
 
   isScheduledOn(date: Date): boolean {

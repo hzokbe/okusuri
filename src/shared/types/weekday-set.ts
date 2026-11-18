@@ -14,8 +14,4 @@ export class WeekdaySet {
   static everyDay(): WeekdaySet {
     return new WeekdaySet(new Set(WEEKDAYS));
   }
-
-  has(day: Weekday): boolean {
-    return this.days.has(day);
-  }
 }

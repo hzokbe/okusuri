@@ -9,7 +9,3 @@ export const WEEKDAYS = [
 ] as const;
 
 export type Weekday = (typeof WEEKDAYS)[number];
-
-export function weekdayFromDate(date: Date): Weekday {
-  return WEEKDAYS[date.getDay()];
-}

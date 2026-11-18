@@ -25,7 +25,7 @@ export default function Card({
         {description && <Text style={styles.p}>{description}</Text>}
       </View>
       {children && <View>{children}</View>}
-      <View style={{ flexDirection: 'row', gap: 4 }}>
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 4 }}>
         {badges.map((badge, index) => (
           <Badge key={index} text={badge.text} icon={badge.icon} />
         ))}
