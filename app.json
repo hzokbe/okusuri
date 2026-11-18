@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "okusuri",
+    "slug": "okusuri",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "okusuri",
+    "userInterfaceStyle": "automatic",
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#fcfcfc"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "server"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#3e63dd"
+        }
+      ],
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
